@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .container{
+        display: grid;
+        border: 1px solid black;
+        display: grid;
+        grid-gap: 5px;
+      }
+
+      .c1{
+        /* Auto fit adds empty divs after 4 with content are exhausted and stratches the divs */
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: 200px 200px;
+      }
+
+      .c2{
+        /* Auto fill keeps adding 200px divs even if they have no contnent when stretched */
+
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-rows: 200px 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">AUTO-FIT</h1>
+        <div class="container c1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <h1 class="title">AUTO-FILL</h1>
+        <div class="container c2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Justify & align content</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .container{
+        border: 3px solid black;
+        display: grid;
+        height: 100%;
+        grid-gap: 5px;
+        grid-template-rows: repeat(2, 100px);
+        grid-template-columns: repeat(3, 100px);
+
+        /* justify and align content affects all the internal elements of the container as one entity */
+
+        justify-content: center;
+
+        /* align-content: center; */
+        /* align-content: end; */
+        /* align-content: space-between; */
+        /* align-content: space-evenly; */
+        align-content: space-around;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>
